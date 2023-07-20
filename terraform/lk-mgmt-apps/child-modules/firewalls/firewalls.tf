@@ -18,12 +18,14 @@ module "firewalls" {
   healthcheck_protocol                       = var.healthcheck_protocol
   healthcheck_description                    = var.healthcheck_description
   healthcheck_name                           = var.healthcheck_name
-  healthcheck_ranges                         = var.healthcheck_range
+  healthcheck_ranges                         = var.healthcheck_ranges
   allow_all_internal_network_port            = var.allow_all_internal_network_port
+  allow_all_internal_network_protocol        = var.allow_all_internal_network_protocol
   allow_all_internal_network_description     = var.allow_all_internal_network_description
   allow_all_internal_network_name            = var.allow_all_internal_network_name
   allow_all_internal_network_ranges          = var.allow_all_internal_network_ranges
   allow_all_internal_network_gke_port        = var.allow_all_internal_network_gke_port
+  allow_all_internal_network_gke_protocol    = var.allow_all_internal_network_gke_protocol
   allow_all_internal_network_gke_description = var.allow_all_internal_network_gke_description
   allow_all_internal_network_gke_name        = var.allow_all_internal_network_gke_name
   allow_all_internal_network_gke_ranges      = var.allow_all_internal_network_gke_ranges
