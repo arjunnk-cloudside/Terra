@@ -1,6 +1,6 @@
 routing_mode                    = "GLOBAL"
 private_ip_google_access        = "true"
-project                         = "cloudside-academy"   // "lk-mgmt-apps"
+project                         = "lk-mgmt-apps"
 region                          = "asia-south2"
 name_vpc_network                = "vpc-m-services-base"
 name_private_subnet_shared      = "sb-m-services-base-asso2-shared1"
