@@ -19,5 +19,23 @@ module "firewalls" {
   healthcheck_description = var.healthcheck_description
   healthcheck_name        = var.healthcheck_name
   healthcheck_ranges      = var.healthcheck_range
-  
+  allow_all_internal_network_port = var.allow_all_internal_network_port
+  allow_all_internal_network_description = var.allow_all_internal_network_description
+  allow_all_internal_network_name = var.allow_all_internal_network_name
+  allow_all_internal_network_ranges = var.allow_all_internal_network_ranges
+  allow_all_internal_network_gke_port = var.allow_all_internal_network_gke_port
+  allow_all_internal_network_gke_description = var.allow_all_internal_network_gke_description
+  allow_all_internal_network_gke_name = var.allow_all_internal_network_gke_name
+  allow_all_internal_network_gke_ranges = var.allow_all_internal_network_gke_ranges
+  allow_gke_kubeseal_port = var.allow_gke_kubeseal_port
+  allow_gke_kubeseal_protocol = var.allow_gke_kubeseal_protocol
+  allow_gke_kubeseal_description = var.allow_gke_kubeseal_description
+  allow_gke_kubeseal_name = var.allow_gke_kubeseal_name
+  allow_gke_kubeseal_ranges = var.allow_gke_kubeseal_ranges
+  gke_allow_tcp_loadbalencer_port = var.gke_allow_tcp_loadbalencer_port
+  gke_allow_tcp_loadbalencer_protocol = var.gke_allow_tcp_loadbalencer_protocol
+  gke_allow_tcp_loadbalencer_description = var.gke_allow_tcp_loadbalencer_description
+  gke_allow_tcp_loadbalencer_name = var.gke_allow_tcp_loadbalencer_name
+  gke_allow_tcp_loadbalencer_ranges = var.gke_allow_tcp_loadbalencer_ranges
+
 }
