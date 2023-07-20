@@ -71,7 +71,7 @@ resource "google_compute_firewall" "fw-services-base-allow-all-internal-network-
 }
 resource "google_compute_firewall" "fw-services-base-allow-gke-kubeseal-01" {
   allow {
-    ports    = var.allow_gke_kubseal_port
+    ports    = var.allow_gke_kubeseal_port
     protocol = var.allow_gke_kubeseal_protocol
   }
   description   = var.allow_gke_kubeseal_description
