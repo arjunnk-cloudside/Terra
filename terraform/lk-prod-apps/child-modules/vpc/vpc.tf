@@ -1,0 +1,23 @@
+module "vpc" {
+  source                   = "../../modules/vpc"
+  project                  = var.project
+  private_ip_google_access = var.private_ip_google_access
+  region                   = var.region
+  routing_mode             = var.routing_mode
+  name_private_subnet_shared = var.name_private_subnet_shared
+  name_vpc_network         = var.name_vpc_network
+  auto_create_subnetworks  = var.auto_create_subnetworks
+  ip_cidr_range_shared     = var.ip_cidr_range_shared
+  gke_pod_shared_ip        = var.gke_pod_shared_ip
+  gke_svc_shared_ip        = var.gke_svc_shared_ip
+  gke_pod_shared_name      = var.gke_pod_shared_name
+  gke_svc_shared_name      = var.gke_svc_shared_name
+  name_private_subnet_app  = var.name_private_subnet_app
+  ip_cidr_range_app        = var.ip_cidr_range_app
+  gke_pod_app_ip           = var.gke_pod_app_ip
+  gke_svc_app_ip           = var.gke_svc_app_ip
+  gke_pod_app_name         = var.gke_pod_app_name
+  gke_svc_app_name         = var.gke_svc_app_name
+  name_private_subnet_db  = var.name_private_subnet_db
+  ip_cidr_range_db        = var.ip_cidr_range_db
+}
