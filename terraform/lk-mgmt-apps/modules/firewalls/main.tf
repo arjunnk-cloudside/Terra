@@ -48,6 +48,7 @@ resource "google_compute_firewall" "fw-services-base-health-check-gcp" {
 resource "google_compute_firewall" "fw-services-base-allow-all-internal-network" {
   allow {
     ports    = var.allow_all_internal_network_port
+    protocol = var.allow_all_internal_network_protocol
   }
   description   = var.allow_all_internal_network_description
   direction     = var.direction
@@ -60,6 +61,7 @@ resource "google_compute_firewall" "fw-services-base-allow-all-internal-network"
 resource "google_compute_firewall" "fw-services-base-allow-all-internal-network-gke" {
   allow {
     ports    = var.allow_all_internal_network_gke_port
+    protocol = var.allow_all_internal_network_gke_protocol
   }
   description   = var.allow_all_internal_network_gke_description
   direction     = var.direction
