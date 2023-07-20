@@ -78,6 +78,10 @@ variable "allow_all_internal_network_port" {
   description = "list of ports to which this rule applies"
   type        = list(string)
 }
+variable "allow_all_internal_network_protocol" {
+  description = "IP protocol to which this rule applies"
+  type        = string
+}
 variable "allow_all_internal_network_description" {
   description = "Description of the firewall "
   type        = string
@@ -93,6 +97,10 @@ variable "allow_all_internal_network_ranges" {
 variable "allow_all_internal_network_gke_port" {
   description = "list of ports to which this rule applies"
   type        = list(string)
+}
+variable "allow_all_internal_network_gke_protocol" {
+  description = "IP protocol to which this rule applies"
+  type        = string
 }
 variable "allow_all_internal_network_gke_description" {
   description = "Description of the firewall "
