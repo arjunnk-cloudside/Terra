@@ -7,16 +7,16 @@ variable "network" {
   type        = string
 }
 variable "priority" {
-    description = "firewall rule priority"
-    type        = number
+  description = "firewall rule priority"
+  type        = number
 }
 variable "project" {
-    description = "Name of the project"
-    type        = string
+  description = "Name of the project"
+  type        = string
 }
 variable "iap_port" {
   description = "list of ports to which this rule applies"
-  type        = list(string) 
+  type        = list(string)
 }
 variable "iap_protocol" {
   description = "IP protocol to which this rule applies"
@@ -32,11 +32,11 @@ variable "iap_name" {
 }
 variable "iap_ranges" {
   description = "Source IP ranges"
-  type        = set(string)  
+  type        = set(string)
 }
 variable "http_port" {
   description = "list of ports to which this rule applies"
-  type        = list(string) 
+  type        = list(string)
 }
 variable "http_protocol" {
   description = "IP protocol to which this rule applies"
@@ -52,11 +52,11 @@ variable "http_name" {
 }
 variable "http_ranges" {
   description = "Source IP ranges"
-  type        = set(string)  
+  type        = set(string)
 }
 variable "healthcheck_port" {
   description = "list of ports to which this rule applies"
-  type        = list(string) 
+  type        = list(string)
 }
 variable "healthcheck_protocol" {
   description = "IP protocol to which this rule applies"
@@ -72,7 +72,7 @@ variable "healthcheck_name" {
 }
 variable "healthcheck_ranges" {
   description = "Source IP ranges"
-  type        = set(string)  
+  type        = set(string)
 }
 variable "allow_all_internal_network_port" {
   description = "list of ports to which this rule applies"
