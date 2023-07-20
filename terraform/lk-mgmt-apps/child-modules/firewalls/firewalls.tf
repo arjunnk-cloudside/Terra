@@ -18,5 +18,6 @@ module "firewalls" {
   healthcheck_protocol    = var.healthcheck_protocol
   healthcheck_description = var.healthcheck_description
   healthcheck_name        = var.healthcheck_name
-  healthcheck_ranges      = var.healthcheck_ranges
+  healthcheck_ranges      = var.healthcheck_range
+  
 }

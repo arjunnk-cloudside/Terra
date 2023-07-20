@@ -1,5 +1,5 @@
 region  		= "asia-south2"
-router_name 		= "cr-services-base-cr1"
+router_name 		= "cr-m-services-base-asso2-cr1"
 network 		= "vpc-m-services-base"
 project 		= "lk-mgmt-apps"
 bgp_asn 		= "64519"
