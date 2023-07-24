@@ -6,8 +6,8 @@
     purpose          			 = "VPC_PEERING"
     name             			 = "mysql-01"
     region           			 = "asia-south2"
-    project          			 = "lk-mgmt-apps""
-    network          			 = "projects/lk-mgmt-apps/global/networks/vpc-m-services-base"
+    project          			 = "lk-dev-apps""
+    network          			 = "projects/lk-dev-apps/global/networks/vpc-d-services-base"
     database_version 			 = "MYSQL_8_0"
     activation_policy			 = "ALWAYS"
     availability_type			 = "ZONAL"
@@ -24,14 +24,14 @@
     disk_size            		 = "20"
     disk_type            		 = "PD_SSD"
     ipv4_enabled   			 = "false"  
-    private_network			 = "projects/lk-mgmt-apps/global/networks/vpc-m-services-base"
+    private_network			 = "projects/lk-dev-apps/global/networks/vpc-d-services-base"
     require_ssl    			 = "false"
-    authorized_network_name		 = "vpc-m-services-base"
+    authorized_network_name		 = "vpc-d-services-base"
     authorized_network_value		 = "10.10.16.0/21"
     zone           			 = "asia-south2-b"
     day            			 = "5"
     hour           			 = "18"
     pricing_plan   			 = "PER_USE" 
     tier           			 = "db-custom-2-4096"
-    user_labels    			 = {env="mgmt",team="devops"}
+    user_labels    			 = {env="dev",team="devops",deployed-by="Cloudside"}
     deletion_protection 		 = true
