@@ -1,5 +1,5 @@
 zone                = "asia-south2"
-labels              =  {env = "mgmt", team = "devops"}
+labels              =  {env = "mgmt", team = "devops", deployed-by = "cloudside"}
 image               = "ubuntu-2110-impish-v20220309"
 can_ip_forward      = false
 deletion_protection = false
