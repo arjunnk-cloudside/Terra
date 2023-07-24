@@ -1,4 +1,4 @@
-module "vm-public" {
+module "vm-private" {
     source              = "../../../modules/gce"
     zone                = var.zone
     labels              = var.labels
