@@ -1,11 +1,11 @@
-zone                = "asia-south2"
+zone                = "asia-south2-a"
 labels              =  {env = "mgmt", team = "devops", deployed-by = "cloudside"}
-image               = "ubuntu-2110-impish-v20220309"
+image               = "ubuntu-2204-jammy-v20230714"
 can_ip_forward      = false
 deletion_protection = false
 enable_display      = false
 machine_type        = "e2-micro"
-name                = "mgmt-vm"
+name                = "vm-m-services-base-asso2-mgmt-01 "
 network             = "vpc-m-services-base"
 subnetwork_project  = "lk-mgmt-apps"
 queue_count         = "0"
