@@ -1,5 +1,5 @@
 direction                                  = "INGRESS"
-network                                    = "vpc-m-services-base"
+network                                    = "vpc-p-services-base"
 priority                                   = 1000
 project                                    = "lk-prod-apps"
 iap_port                                   = ["22"]
