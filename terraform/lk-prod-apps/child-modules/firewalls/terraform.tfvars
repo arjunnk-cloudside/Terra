@@ -32,11 +32,11 @@ allow_gke_kubeseal_protocol                = "tcp"
 allow_gke_kubeseal_description             = "allow gke kubeseal"
 allow_gke_kubeseal_name                    = "fw-p-services-base-allow-gke-kubeseal-01"
 allow_gke_kubeseal_ranges                  = ["10.9.0.0/28"]
-gke_allow_tcp_loadbalencer_port            = "8080"
-gke_allow_tcp_loadbalencer_protocol        = "tcp"
-gke_allow_tcp_loadbalencer_description     = "allow tcp loadbalencer"
-gke_allow_tcp_loadbalencer_name            = "fw-gke-allow-tcp-loadbalencer"
-gke_allow_tcp_loadbalencer_ranges          = ["130.211.0.0/22", "35.191.0.0/16"]
+gke_allow_tcp_loadbalancer_port            = "8080"
+gke_allow_tcp_loadbalancer_protocol        = "tcp"
+gke_allow_tcp_loadbalancer_description     = "allow tcp loadbalancer"
+gke_allow_tcp_loadbalancer_name            = "fw-gke-allow-tcp-loadbalancer"
+gke_allow_tcp_loadbalancer_ranges          = ["130.211.0.0/22", "35.191.0.0/16"]
 
 
 
