@@ -1,5 +1,5 @@
 module "vm-public" {
-    source              = "../../modules/gce"
+    source              = "../../../modules/gce"
     zone                = var.zone
     labels              = var.labels
     image               = var.image
