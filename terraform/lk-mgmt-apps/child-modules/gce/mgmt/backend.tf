@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "bkt-stage-tfstate"
+    bucket = "bkt-lk-mgmt-apps-tfstate"
     prefix = "vm"
   }
 }
