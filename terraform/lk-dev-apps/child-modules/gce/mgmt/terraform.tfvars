@@ -16,5 +16,5 @@ on_host_maintenance = "MIGRATE"  // if preemptible is true then the value should
 preemptible         = "false"
 email               = "769170094354-compute@developer.gserviceaccount.com"
 scopes              = ["cloud-platform"]
-tags                = ["allow-ssh","dev"]
+tags                = ["allow-ssh","mgmt"]
 size                = "10"
