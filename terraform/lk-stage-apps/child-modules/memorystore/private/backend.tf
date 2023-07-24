@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "bkt-lk-mgmt-apps-tfstate"
+    bucket = "bkt-lk-stage-apps-tfstate"
     prefix = "redis-private"
   }
 }
