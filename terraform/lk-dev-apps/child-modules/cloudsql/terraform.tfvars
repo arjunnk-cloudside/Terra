@@ -33,5 +33,5 @@
     hour           			 = "18"
     pricing_plan   			 = "PER_USE" 
     tier           			 = "db-custom-2-4096"
-    user_labels    			 = {env="dev",team="devops",deployed-by="Cloudside"}
+    user_labels    			 = {env="dev",team="devops",deployed-by="cloudside"}
     deletion_protection 		 = true
