@@ -34,10 +34,10 @@ module "firewalls" {
   allow_gke_kubeseal_description             = var.allow_gke_kubeseal_description
   allow_gke_kubeseal_name                    = var.allow_gke_kubeseal_name
   allow_gke_kubeseal_ranges                  = var.allow_gke_kubeseal_ranges
-  gke_allow_tcp_loadbalencer_port            = var.gke_allow_tcp_loadbalencer_port
-  gke_allow_tcp_loadbalencer_protocol        = var.gke_allow_tcp_loadbalencer_protocol
-  gke_allow_tcp_loadbalencer_description     = var.gke_allow_tcp_loadbalencer_description
-  gke_allow_tcp_loadbalencer_name            = var.gke_allow_tcp_loadbalencer_name
-  gke_allow_tcp_loadbalencer_ranges          = var.gke_allow_tcp_loadbalencer_ranges
+  gke_allow_tcp_loadbalancer_port            = var.gke_allow_tcp_loadbalancer_port
+  gke_allow_tcp_loadbalancer_protocol        = var.gke_allow_tcp_loadbalancer_protocol
+  gke_allow_tcp_loadbalancer_description     = var.gke_allow_tcp_loadbalancer_description
+  gke_allow_tcp_loadbalancer_name            = var.gke_allow_tcp_loadbalancer_name
+  gke_allow_tcp_loadbalancer_ranges          = var.gke_allow_tcp_loadbalancer_ranges
 
 }
