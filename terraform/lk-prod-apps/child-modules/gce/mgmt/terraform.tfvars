@@ -1,6 +1,6 @@
-zone                = "asia-south2"
+zone                = "asia-south2-a"
 labels              =  {env = "prod", team = "devops", deployed-by = "cloudside"}
-image               = "ubuntu-2204-jammy-v20220712"
+image               = "ubuntu-2204-jammy-v20230714"
 can_ip_forward      = false
 deletion_protection = false
 enable_display      = false
