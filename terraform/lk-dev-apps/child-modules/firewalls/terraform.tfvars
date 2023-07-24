@@ -1,7 +1,7 @@
 direction                                  = "INGRESS"
 network                                    = "vpc-d-services-base"
 priority                                   = 1000
-project                                    = "cloudside-academy"
+project                                    = "lk-dev-apps"
 iap_port                                   = ["22"]
 iap_protocol                               = "tcp"
 iap_description                            = "SSH access via IAP"
