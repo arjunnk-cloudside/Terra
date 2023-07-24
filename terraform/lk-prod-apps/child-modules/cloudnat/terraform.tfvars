@@ -1,7 +1,7 @@
 region  		= "asia-south2"
 router_name 		= "cr-p-services-base-asso2-cr1"
 network 		= "vpc-p-services-base"
-project 		= "lk-mgmt-apps"
+project 		= "lk-prod-apps"
 bgp_asn 		= "64519"
 ip_count 		= "2"
 nat_name 		= "nat-p-services-base-asso2-nat1"
