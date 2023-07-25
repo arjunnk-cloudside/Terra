@@ -52,7 +52,7 @@ resource "google_container_node_pool" "node-pool-e2-m-01" {
   cluster            = google_container_cluster.gke-test-cluster-01.name
   location           = var.location
   project            = var.project
-  management {8
+  management {
     auto_repair  = var.auto_repair
     auto_upgrade = var.auto_upgrade
   }
