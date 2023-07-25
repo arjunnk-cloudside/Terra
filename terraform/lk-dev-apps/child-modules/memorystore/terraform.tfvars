@@ -1,5 +1,5 @@
   name                             = "redisid"
-  project                          = "lk-dev-apps""
+  project                          = "lk-dev-apps"
   display_name                     = "redisinstance"
   memory_size_gb                   = 5
   tier                             = "STANDARD_HA"
