@@ -1,5 +1,5 @@
   name                             = "vm-d-services-base-asso2-redis-3-01"
-  project                          = "lk-prod-apps""
+  project                          = "lk-prod-apps"
   display_name                     = "vm-d-services-base-asso2-redis-3-01"
   memory_size_gb                   = 5
   tier                             = "STANDARD_HA"
@@ -11,7 +11,7 @@
   auth_enabled                     = "true"
   redis_version                    = "REDIS_6_X"
 
-  labels                           = {env = "dev"}
+  labels                           = {env="prod",team="devops",deployed-by="cloudside"}
 
   name_network                     = "test-network"
 
