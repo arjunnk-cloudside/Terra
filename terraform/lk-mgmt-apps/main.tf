@@ -1,6 +1,6 @@
 # VPC
 module "vpc" {
-  source                   = "./modules/vpc"
+  source                   = "../modules/vpc"
   project                  = var.project
   private_ip_google_access = var.private_ip_google_access
   region                   = var.region
@@ -25,7 +25,7 @@ module "vpc" {
 
 # Firewalls
 module "firewalls" {
-  source                                     = "./modules/firewalls"
+  source                                     = "../modules/firewalls"
   direction                                  = var.direction
   network                                    = var.network
   priority                                   = var.priority
@@ -69,7 +69,7 @@ module "firewalls" {
 
 # Cloudnat
 module "cloudnat" {
-    source = "./modules/cloudnat"
+    source = "../modules/cloudnat"
     region  = var.region
     router_name = var.router_name
     network = var.network
@@ -83,7 +83,7 @@ module "cloudnat" {
 
 # Service Account
 module "service-account" {
-    source       = "./modules/service-account"
+    source       = "../modules/service-account"
     account_id   = var.account_id
     display_name = var.display_name
     description  = var.description
@@ -92,8 +92,8 @@ module "service-account" {
 
 
 #mgmt vm
-module "vm-private" {
-    source              = "./modules/gce"
+module "mgmt-vm" {
+    source              = "../modules/gce"
     zone                = var.zone
     labels              = var.labels
     image               = var.image
@@ -119,7 +119,7 @@ module "vm-private" {
 # gke
 
 module "gke-private" {
-  source = "./modules/gke-private"
+  source = "../modules/gke-private"
   name                      = var.name
   location                    = var.location
   project                     = var.project
