@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "bkt-stage-tfstate"
+    bucket = "mgmt-tfstate"
     prefix = "service-account"
   }
 }

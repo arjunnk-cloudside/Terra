@@ -12,18 +12,18 @@ variable "project" {
 }
 variable "region" {
   description = "Name of the region"
-    type        = string
+  type        = string
 }
 variable "bgp_asn" {
   description = "Autonomous system number for bgp"
-    type        = number
+  type        = number
 }
 variable "nat_name" {
   description = "Name of the cloud NAT"
 }
 variable "nat_ip_allocate_option" {
-    description = "How external IPs should be allocated for this NAT"
-    type        = string
+  description = "How external IPs should be allocated for this NAT"
+  type        = string
 }
 variable "source_subnetwork_ip_ranges_to_nat" {
   description = "How NAT should be configured per Subnetwork"

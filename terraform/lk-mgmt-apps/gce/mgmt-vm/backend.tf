@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
     bucket = "mgmt-tfstate"
-    prefix = "cloudnat"
+    prefix = "vm/mgmt-vm"
   }
 }

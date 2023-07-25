@@ -18,6 +18,11 @@ variable "uniform_bucket_level_access" {
     type        = bool
 }
 
+variable "versioning_enabled" {
+  description = "Enable or disable Versioning"
+    type        = bool
+}
+
 variable "labels" {
   type        = map(string)
   description = "Labels, provided as a map"
