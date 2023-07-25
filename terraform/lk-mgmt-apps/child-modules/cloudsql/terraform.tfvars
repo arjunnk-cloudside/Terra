@@ -6,7 +6,7 @@
     purpose          			 = "VPC_PEERING"
     name             			 = "mysql-01"
     region           			 = "asia-south2"
-    project          			 = "lk-mgmt-apps""
+    project          			 = "lk-mgmt-apps"
     network          			 = "projects/lk-mgmt-apps/global/networks/vpc-m-services-base"
     database_version 			 = "MYSQL_8_0"
     activation_policy			 = "ALWAYS"
@@ -33,5 +33,5 @@
     hour           			 = "18"
     pricing_plan   			 = "PER_USE" 
     tier           			 = "db-custom-2-4096"
-    user_labels    			 = {env="mgmt",team="devops"}
+    user_labels    			 = {env="mgmt",team="devops",deployed-by="cloudside"}
     deletion_protection 		 = true
