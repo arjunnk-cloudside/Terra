@@ -1,5 +1,5 @@
 zone                = "asia-south2-a"
-labels              =  {env = "stage", team = "devops","deployed-by = "cloudside"}
+labels              =  {env = "stage", team = "devops",deployed-by = "cloudside"}
 image               = "ubuntu-2204-jammy-v20230714"
 can_ip_forward      = false
 deletion_protection = false
