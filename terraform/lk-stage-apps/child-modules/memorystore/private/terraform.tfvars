@@ -1,5 +1,5 @@
   name                             = "redisid"
-  project                          = "lk-mgmt-apps""
+  project                          = "lk-mgmt-apps"
   display_name                     = "redisinstance"
   memory_size_gb                   = 5
   tier                             = "STANDARD_HA"
@@ -11,7 +11,7 @@
   auth_enabled                     = "true"
   redis_version                    = "REDIS_6_X"
 
-  labels                           = {env = "dev"}
+  labels                           = {env="stage",team="devops",deployed-by= "cloudside" }
 
   name_network                     = "test-network"
 
