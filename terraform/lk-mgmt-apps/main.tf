@@ -1,4 +1,4 @@
-# mgmt VPC
+# VPC
 module "vpc" {
   source                   = "./modules/vpc"
   project                  = var.project
@@ -23,7 +23,7 @@ module "vpc" {
   ip_cidr_range_db        = var.ip_cidr_range_db
 }
 
-#mgmt Firewalls
+# Firewalls
 module "firewalls" {
   source                                     = "./modules/firewalls"
   direction                                  = var.direction
@@ -67,6 +67,30 @@ module "firewalls" {
   gke_allow_tcp_loadbalancer_ranges          = var.gke_allow_tcp_loadbalancer_ranges
 }
 
+# Cloudnat
+module "cloudnat" {
+    source = "./modules/cloudnat"
+    region  = var.region
+    router_name = var.router_name
+    network = var.network
+    project = var.project
+    bgp_asn = var.bgp_asn
+    ip_count = var.ip_count
+    nat_name = var.nat_name
+    nat_ip_allocate_option = var.nat_ip_allocate_option
+    source_subnetwork_ip_ranges_to_nat = var.source_subnetwork_ip_ranges_to_nat
+}
+
+# Service Account
+module "service-account" {
+    source       = "./modules/service-account"
+    account_id   = var.account_id
+    display_name = var.display_name
+    description  = var.description
+    project      = var.project 
+}
+
+
 #mgmt vm
 module "vm-private" {
     source              = "./modules/gce"
@@ -92,3 +116,48 @@ module "vm-private" {
     size                = var.size
 }
 
+# gke
+
+module "gke-private" {
+  source = "./modules/gke-private"
+  name                      = var.name
+  location                    = var.location
+  project                     = var.project
+  node_locations              = var.node_locations
+  initial_node_count          = var.initial_node_count
+  channel                     = var.channel
+  cluster_secondary_range_name = var.cluster_secondary_range_name
+  services_secondary_range_name = var.services_secondary_range_name
+  network                     = var.network
+  subnetwork                  = var.subnetwork
+  enable_private_endpoint     = var.enable_private_endpoint
+  enable_private_nodes        = var.enable_private_nodes
+  master_ipv4_cidr_block      = var.master_ipv4_cidr_block
+  enable_shielded_nodes       = var.enable_shielded_nodes
+  workload_pool               = var.workload_pool
+  issue_client_certificate    = var.issue_client_certificate
+  cidr_block                  = var.cidr_block
+  display_name                = var.display_name
+  enable_components           = var.enable_components
+  max_node_count              = var.max_node_count
+  min_node_count              = var.min_node_count
+  node_count                  = var.node_count
+  disk_size_gb                = var.disk_size_gb
+  disk_type                   = var.disk_type
+  image_type                  = var.image_type
+  local_ssd_count             = var.local_ssd_count
+  machine_type                = var.machine_type
+  max_pods_per_node           = var.max_pods_per_node
+  service_account             = var.service_account
+  oauth_scopes                = var.oauth_scopes
+  auto_repair                 = var.auto_repair
+  auto_upgrade                = var.auto_upgrade
+  max_surge                   = var.max_surge
+  max_unavailable             = var.max_unavailable
+  enable_integrity_monitoring = var.enable_integrity_monitoring
+  enable_secure_boot          = var.enable_secure_boot
+  network_policy              = var.network_policy
+  master_global_access         = var.master_global_access
+  nodepool_name               = var.nodepool_name
+  node_version                = var.node_version
+}
