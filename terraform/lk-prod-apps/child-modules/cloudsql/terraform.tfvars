@@ -6,7 +6,7 @@
     purpose          			 = "VPC_PEERING"
     name             			 = "mysql-01"
     region           			 = "asia-south2"
-    project          			 = "lk-prod-apps""
+    project          			 = "lk-prod-apps"
     network          			 = "projects/lk-prod-apps/global/networks/vpc-p-services-base"
     database_version 			 = "MYSQL_8_0"
     activation_policy			 = "ALWAYS"
