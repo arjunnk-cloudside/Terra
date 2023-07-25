@@ -11,7 +11,7 @@
   auth_enabled                     = "true"
   redis_version                    = "REDIS_6_X"
 
-  labels                           = {env = "dev"}
+  labels                           = {env="dev",team="devops",deployed-by="cloudside"}
 
   name_network                     = "test-network"
 
