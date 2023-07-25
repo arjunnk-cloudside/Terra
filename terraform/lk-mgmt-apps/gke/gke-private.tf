@@ -1,5 +1,5 @@
-module "gke-private" {
-  source = "../../modules/gke-private"
+module "gke" {
+  source = "../../modules/gke"
   name                      = var.name
   location                    = var.location
   project                     = var.project
