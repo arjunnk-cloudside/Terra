@@ -44,7 +44,7 @@ resource "google_container_cluster" "gke-cluster-01" {
     workload_pool = var.workload_pool
   }
 }
-resource "google_container_node_pool" "node-pool-asso2-mgmt-01" {
+resource "google_container_node_pool" "node-pool-e2-m-01" {
  autoscaling {
   max_node_count= var.max_node_count
   min_node_count= var.min_node_count
@@ -79,7 +79,7 @@ resource "google_container_node_pool" "node-pool-asso2-mgmt-01" {
   version = var.node_version
 }
 
-resource "google_container_node_pool" "node-pool-asso2-mgmt-02" {
+resource "google_container_node_pool" "node-pool-e2-m-02" {
  autoscaling {
   max_node_count= var.max_node_count
   min_node_count= var.min_node_count
