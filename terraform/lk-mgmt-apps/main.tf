@@ -1,0 +1,94 @@
+# mgmt VPC
+module "vpc" {
+  source                   = "./modules/vpc"
+  project                  = var.project
+  private_ip_google_access = var.private_ip_google_access
+  region                   = var.region
+  routing_mode             = var.routing_mode
+  name_private_subnet_shared = var.name_private_subnet_shared
+  name_vpc_network         = var.name_vpc_network
+  auto_create_subnetworks  = var.auto_create_subnetworks
+  ip_cidr_range_shared     = var.ip_cidr_range_shared
+  gke_pod_shared_ip        = var.gke_pod_shared_ip
+  gke_svc_shared_ip        = var.gke_svc_shared_ip
+  gke_pod_shared_name      = var.gke_pod_shared_name
+  gke_svc_shared_name      = var.gke_svc_shared_name
+  name_private_subnet_app  = var.name_private_subnet_app
+  ip_cidr_range_app        = var.ip_cidr_range_app
+  gke_pod_app_ip           = var.gke_pod_app_ip
+  gke_svc_app_ip           = var.gke_svc_app_ip
+  gke_pod_app_name         = var.gke_pod_app_name
+  gke_svc_app_name         = var.gke_svc_app_name
+  name_private_subnet_db  = var.name_private_subnet_db
+  ip_cidr_range_db        = var.ip_cidr_range_db
+}
+
+#mgmt Firewalls
+module "firewalls" {
+  source                                     = "./modules/firewalls"
+  direction                                  = var.direction
+  network                                    = var.network
+  priority                                   = var.priority
+  project                                    = var.project
+  iap_port                                   = var.iap_port
+  iap_protocol                               = var.iap_protocol
+  iap_description                            = var.iap_description
+  iap_name                                   = var.iap_name
+  iap_ranges                                 = var.iap_ranges
+  http_port                                  = var.http_port
+  http_protocol                              = var.http_protocol
+  http_description                           = var.http_description
+  http_name                                  = var.http_name
+  http_ranges                                = var.http_ranges
+  healthcheck_port                           = var.healthcheck_port
+  healthcheck_protocol                       = var.healthcheck_protocol
+  healthcheck_description                    = var.healthcheck_description
+  healthcheck_name                           = var.healthcheck_name
+  healthcheck_ranges                         = var.healthcheck_ranges
+  allow_all_internal_network_port            = var.allow_all_internal_network_port
+  allow_all_internal_network_protocol        = var.allow_all_internal_network_protocol
+  allow_all_internal_network_description     = var.allow_all_internal_network_description
+  allow_all_internal_network_name            = var.allow_all_internal_network_name
+  allow_all_internal_network_ranges          = var.allow_all_internal_network_ranges
+  allow_all_internal_network_gke_port        = var.allow_all_internal_network_gke_port
+  allow_all_internal_network_gke_protocol    = var.allow_all_internal_network_gke_protocol
+  allow_all_internal_network_gke_description = var.allow_all_internal_network_gke_description
+  allow_all_internal_network_gke_name        = var.allow_all_internal_network_gke_name
+  allow_all_internal_network_gke_ranges      = var.allow_all_internal_network_gke_ranges
+  allow_gke_kubeseal_port                    = var.allow_gke_kubeseal_port
+  allow_gke_kubeseal_protocol                = var.allow_gke_kubeseal_protocol
+  allow_gke_kubeseal_description             = var.allow_gke_kubeseal_description
+  allow_gke_kubeseal_name                    = var.allow_gke_kubeseal_name
+  allow_gke_kubeseal_ranges                  = var.allow_gke_kubeseal_ranges
+  gke_allow_tcp_loadbalancer_port            = var.gke_allow_tcp_loadbalancer_port
+  gke_allow_tcp_loadbalancer_protocol        = var.gke_allow_tcp_loadbalancer_protocol
+  gke_allow_tcp_loadbalancer_description     = var.gke_allow_tcp_loadbalancer_description
+  gke_allow_tcp_loadbalancer_name            = var.gke_allow_tcp_loadbalancer_name
+  gke_allow_tcp_loadbalancer_ranges          = var.gke_allow_tcp_loadbalancer_ranges
+}
+
+#mgmt vm
+module "vm-private" {
+    source              = "./modules/gce"
+    zone                = var.zone
+    labels              = var.labels
+    image               = var.image
+    can_ip_forward      = var.can_ip_forward
+    deletion_protection = var.deletion_protection
+    enable_display      = var.enable_display
+    machine_type        = var.machine_type
+    name                = var.name
+    network             = var.network
+    subnetwork_project  = var.subnetwork_project
+    queue_count         = var.queue_count
+    stack_type          = var.stack_type
+    subnetwork          = var.subnetwork
+    min_node_cpus       = var.min_node_cpus
+    on_host_maintenance = var.on_host_maintenance
+    preemptible         = var.preemptible
+    email               = var.email
+    scopes              = var.scopes
+    tags                = var.tags
+    size                = var.size
+}
+
