@@ -6,10 +6,10 @@ terraform {
   }
 }
 
-module "vpn_gateway" {
-name    =   var.name
-region  =   var.region
-network =   var.network
-project =   var.project
-
+resource "google_compute_ha_vpn_gateway" "vpn_gateway" {
+  region   = var.region
+  name     = var.name
+  network  = var.network
+  project  = var.project
 }
+
