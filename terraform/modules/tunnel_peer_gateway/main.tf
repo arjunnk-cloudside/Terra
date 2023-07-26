@@ -6,14 +6,6 @@ terraform {
   }
 }
 
-
-
-data "google_compute_ha_vpn_gateway" "gateway" {
-  name    = var.name_vpn_gateway
-  project = var.project
-  region  = var.region
-}
-
 resource "google_compute_router" "router" {
   name    = var.name_router
   network = var.network
@@ -57,7 +49,7 @@ resource "google_compute_vpn_tunnel" "tunnel1" {
   router                          = google_compute_router.router.self_link
   vpn_gateway_interface           = 0
   peer_external_gateway           = google_compute_external_vpn_gateway.external_gateway.self_link
-  vpn_gateway                     = "vpn-gw-gcp-mgmt-to-aws-uat"
+  vpn_gateway                     = var.name_vpn_gateway
   peer_external_gateway_interface = 0
 }
 
@@ -72,7 +64,7 @@ resource "google_compute_vpn_tunnel" "tunnel2" {
   router                          = google_compute_router.router.self_link
   vpn_gateway_interface           = 0
   peer_external_gateway           = google_compute_external_vpn_gateway.external_gateway.self_link
-  vpn_gateway                     = "vpn-gw-gcp-mgmt-to-aws-uat"
+  vpn_gateway                     = var.name_vpn_gateway
   peer_external_gateway_interface = 1
 }
 
@@ -86,7 +78,7 @@ resource "google_compute_vpn_tunnel" "tunnel3" {
   router                          = google_compute_router.router.self_link
   vpn_gateway_interface           = 1
   peer_external_gateway           = google_compute_external_vpn_gateway.external_gateway.self_link
-  vpn_gateway                     = "vpn-gw-gcp-mgmt-to-aws-uat"
+  vpn_gateway                     = var.name_vpn_gateway
   peer_external_gateway_interface = 2
 }
 
@@ -102,7 +94,7 @@ resource "google_compute_vpn_tunnel" "tunnel4" {
   router                          = google_compute_router.router.self_link
   vpn_gateway_interface           = 1
   peer_external_gateway           = google_compute_external_vpn_gateway.external_gateway.self_link
-  vpn_gateway                     = "vpn-gw-gcp-mgmt-to-aws-uat"
+  vpn_gateway                     = var.name_vpn_gateway
   peer_external_gateway_interface = 3
 }
 
